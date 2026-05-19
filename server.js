@@ -3,7 +3,7 @@ const cors = require("cors");
 const fs = require("fs");
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const ADMIN_USER = "admin490";
 const ADMIN_PASS = "22FE1A0490";
 
