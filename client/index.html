@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UrbanBite Café</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <h1>UrbanBite</h1>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#booking">Book</a></li>
+        <li><a href="#admin" id="navAdmin">Admin</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <h2>Fresh Breakfast Everyday ☀️</h2>
+      <p>Healthy • Tasty • Affordable</p>
+      <button>Explore Menu</button>
+    </div>
+  </header>
+
+  <section id="menu" class="menu">
+    <h2>Popular Dishes</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Pancake Combo</h3>
+        <p>$8.99</p>
+      </div>
+
+      <div class="card">
+        <h3>Veg Sandwich</h3>
+        <p>$5.99</p>
+      </div>
+
+      <div class="card">
+        <h3>Cold Coffee</h3>
+        <p>$3.99</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      UrbanBite Café serves fresh homemade breakfast with quality ingredients
+      and cozy atmosphere.
+    </p>
+  </section>
+
+  <section id="booking" class="booking">
+    <h2>Book a Table</h2>
+
+    <form id="bookingForm">
+      <div class="form-row">
+        <input type="text" placeholder="Your Name" id="name" required />
+        <input type="number" placeholder="Guests" id="guests" min="1" required />
+      </div>
+
+      <div class="form-row">
+        <input type="date" id="date" required />
+        <input type="time" id="time" required />
+      </div>
+
+      <div class="form-row">
+        <input type="tel" placeholder="Phone Number" id="phone" />
+        <select id="seating">
+          <option value="Any">Any seating</option>
+          <option value="Indoor">Indoor</option>
+          <option value="Outdoor">Outdoor</option>
+        </select>
+      </div>
+
+      <textarea id="requests" placeholder="Special requests (optional)"></textarea>
+      <button type="submit">Book Now</button>
+    </form>
+
+    <p id="message"></p>
+  </section>
+
+  <section id="admin" class="admin hidden">
+    <div class="admin-card">
+      <h2>Admin Panel</h2>
+
+      <form id="adminLoginForm" class="admin-login-form">
+        <div class="form-row">
+          <input type="text" placeholder="Admin ID" id="adminId" required />
+          <input type="password" placeholder="Password" id="adminPassword" required />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+
+      <p id="adminMessage"></p>
+
+      <div id="bookingList" class="booking-list hidden">
+        <div class="booking-summary">
+          <div><strong>Total bookings:</strong> <span id="bookingCount">0</span></div>
+          <button id="adminLogoutBtn">Logout</button>
+        </div>
+
+        <table id="bookingsTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Guests</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Phone</th>
+              <th>Seating</th>
+              <th>Requests</th>
+              <th>Created</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "name": "genral zod",
+    "guests": 12,
+    "date": "2026-04-17",
+    "time": "23:21",
+    "phone": "7989552340",
+    "seating": "Indoor",
+    "requests": "this is a text message",
+    "createdAt": "2026-05-19T05:51:19.706Z"
+  }
+]
